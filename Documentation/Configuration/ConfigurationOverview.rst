@@ -17,6 +17,78 @@ Most configuration can also be changed by extensions or
 configuration files. Additionally, configuration can be extended by
 extensions.
 
+..  contents:: Table of contents
+    :depth: 1
+
+..  _config-overview-backend:
+
+Configuration in the TYPO3 Backend
+==================================
+
+..  _config-overview-backend-system:
+
+Global configuration for system maintainers
+-------------------------------------------
+
+Global configuration can only be changed by backend users with
+`System Maintainer privileges <https://docs.typo3.org/permalink/t3coreapi:system-maintainer>`_.
+
+Use the backend module :guilabel:`Admin Tools > Settings` to access the
+different configuration options:
+
+..  figure:: /Images/ManualScreenshots/AdminTools/AdminToolsSettings.png
+    :alt: Backend module "Admin Tools > Settings" as seen by a system maintainer
+
+Changes made in this module are written to file :file:`config/system/settings.php`.
+They can be overridden by configuration in file :file:`config/system/additional.php`
+in which case they cannot be changed from the TYPO3 Backend.
+
+..  _config-overview-backend-site:
+
+Site configuration for administrators
+-------------------------------------
+
+..  versionadded:: 13.3
+    The site settings editor has been added with TYPO3 13.3.
+
+TYPO3 backend administrators can set site-wide configuration options in the
+modules :guilabel:`Site Management > Sites` (Site Configuration) and
+:guilabel:`Site Management > Settings` (Site settings).
+
+..  figure:: /Images/ManualScreenshots/SiteHandling/SiteSettings.png
+    :alt: The site settings module in the TYPO3 backend, seen by an administrator
+
+Changes made in this module are written to file :file:`config/sites/my-site/settings.yaml`.
+
+..  seealso::
+
+    *   `TYPO3 Getting Started: Site Management <https://docs.typo3.org/permalink/t3start:site-management>`_
+    *   `TYPO3 Getting Started: Site settings <https://docs.typo3.org/permalink/t3start:settings-site-settings>`_
+    *   `Creating a new site configuration <https://docs.typo3.org/permalink/t3coreapi:sitehandling-create-new>`_
+    *   `Site settings editor <https://docs.typo3.org/permalink/t3coreapi:site-settings-editor>`_
+
+
+..  _config-overview-backend-page:
+
+Page properties and plugin settings
+-----------------------------------
+
+If the user has the necessary permissions settings for a page (and in some
+cases all subpages) can be made in the page properties:
+
+..  figure:: /Images/ManualScreenshots/Backend/PageProperties.png
+    :alt: Screenshot demonstrating the location of the "Edit page properties" button in the header of the "Web > Page" module
+
+    In the "Page" or "List" module click on "Edit page properties"
+
+Some plugins also come with settings, refer to the manual of the extension
+providing the plugin.
+
+..  seealso::
+
+    *   `Tutorial for editors: Page properties <https://docs.typo3.org/permalink/t3editors:pages-properties>`_
+    *   `Site package Tutorial: Choose the page layout in the page properties <https://docs.typo3.org/permalink/t3sitepackage:choose-page-layout>`_
+
 
 Configuration overview: files
 =============================
